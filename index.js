@@ -4,7 +4,7 @@ import axios from "axios";
 const app = express();
 const port = process.env.PORT || 3000;
 
-const apiKey = "babaee17629e6520d1593162a3c9a0be";
+const apiKey = "";
 
 /* http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key} */
 
