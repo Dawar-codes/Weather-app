@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Weather</title>
+</head>
+
+<body>
+    <div id="card">
+        <h1>Weather pro max</h1>
+
+        <form action="/weather" method="get">
+            <div id="content">
+                <label for="cityInput">City</label>
+                <input placeholder="Enter city name" type="text" id="cityBox" name="city">
+
+                <button id="btn" type="submit">Go</button>
+            </div>
+        </form>
+
+    </div>
+    
+    <% if (locals.content) { %>
+    <div id="card2">
+        
+            <h1><%=content.name%></h1>
+            <h2>Current Temprature</h2>
+            <p><%= content.main.temp %>°C</p>
+            <h2>Wind Speed</h2>
+            <p><%= content.wind.speed %> m/s</p>
+     
+            <% } %>
+
+            <% if (locals.error) { %>
+                <h3><%= error %></h3>
+                <% } %>
+    </div>
+   
+
+</body>
+
+</html>
